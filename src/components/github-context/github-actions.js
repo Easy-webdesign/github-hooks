@@ -12,8 +12,6 @@ export default function actions(state, dispatch){
     
     return {
         search: async function(value){
-            console.log(this);
-                console.log(this.setLoading);
                 this.setLoading();
                 const res = await axios.get(withCreds(`https://api.github.com/search/users?q=${value}&`));
                 dispatch({
